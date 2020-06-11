@@ -4,7 +4,7 @@ const postRouter = require('./posts/postRouter.js')
 const server = express();
 const port = 4000
 
-
+server.use(express.json())
 server.use("/api/users", userRouter)
 server.use("/api/posts", postRouter)
 server.use((err, req, res, next) => {
